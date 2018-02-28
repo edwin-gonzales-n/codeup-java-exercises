@@ -1,5 +1,6 @@
 import java.lang.Math;
 import java.util.Scanner;
+//import java.math.BigInteger;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
@@ -27,9 +28,10 @@ public class ControlFlowExercises {
 //            System.out.println((int) Math.pow(i,2));
 //            i*=2;
 //        }while(i <= 500);
-//        for (i = 1; i <=500; i*=2){
-//            System.out.println((int) Math.pow(i,2));
-//        }
+        for (i = 2; i <=100000; i=(int) Math.pow(i,2)){
+            System.out.println(i);
+        }
+//        x = x.multiply(x)
 
         // ### Fizz Buzz
 //        for (i = 1; i <=100; i++){
