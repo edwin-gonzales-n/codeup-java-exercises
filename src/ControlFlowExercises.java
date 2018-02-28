@@ -53,11 +53,33 @@ public class ControlFlowExercises {
         System.out.print("Please enter a number: ");
         userInput = sc.nextInt();
         System.out.printf("%5s%10s%10s\n", "number","squared", "cubed" );
-        for (int x = 1; x <= userInput; x++){
+        for (int x = 1; x <= userInput; x++) {
             number = x;
-            squared = (int)Math.pow(x,2);
-            cubed = (int)Math.pow(x,3);
-            System.out.printf("%6d%10d%10d\n", number,squared, cubed);
+            squared = (int) Math.pow(x, 2);
+            cubed = (int) Math.pow(x, 3);
+            System.out.printf("%6d%10d%10d\n", number, squared, cubed);
+        }
+        System.out.print("Would you like to continue?: ");
+        String firstWord = sc.next();
+        if (firstWord.equalsIgnoreCase("yes") || firstWord.equalsIgnoreCase("y")  ){
+            System.out.print("Please enter a random school grade: ");
+            int firstGrade = sc.nextInt();
+            if (firstGrade <= 100 && firstGrade >= 88){
+                System.out.println("Your school grade is an A! ");
+            } else if (firstGrade <= 87 && firstGrade >= 80){
+                System.out.println("Your school grade is an B! ");
+            } else if (firstGrade <= 79 && firstGrade >= 67){
+                System.out.println("Your school grade is an C! ");
+            } else if (firstGrade <= 66 && firstGrade >= 60){
+                System.out.println("Your school grade is an D! ");
+            } else if (firstGrade <= 59 && firstGrade >= 0){
+                System.out.println("Your school grade is an F! ");
+            }
+        }
+        System.out.print("Would you like to continue?: ");
+        String secondPrompt= sc.next();
+        if (secondPrompt.equalsIgnoreCase("yes") || secondPrompt.equalsIgnoreCase("y")  ) {
+            System.out.println("Well, this program is over, but keep coming");
         }
 
 
