@@ -13,19 +13,21 @@ public class ControlFlowExercises {
 //        } while(i<102);
 //        int  i = 100;
         int i;
-            for (i = 100; i >= -10; i-=5){
-                System.out.printf("%d ",i);
-            }
+//            for (i = 100; i >= -10; i-=5){
+//                System.out.printf("%d ",i);
+//            }
 //        do {
 //            System.out.printf("%d ", i);
 //            i-=5;
 //        } while(i >= -10);
 
-//        int i = 1;
 //        do{
 //            System.out.println((int) Math.pow(i,2));
 //            i*=2;
 //        }while(i <= 500);
+        for (i = 1; i <=500; i*=2){
+            System.out.println((int) Math.pow(i,2));
+        }
 
     }
 }
