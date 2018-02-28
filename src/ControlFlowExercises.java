@@ -13,7 +13,7 @@ public class ControlFlowExercises {
 //        } while(i<102);
 //        int  i = 100;
         int i;
-            for (i = 0; i < 102; i+=2){
+            for (i = 100; i >= -10; i-=5){
                 System.out.printf("%d ",i);
             }
 //        do {
