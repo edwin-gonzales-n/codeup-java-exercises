@@ -28,12 +28,12 @@ public class ControlFlowExercises {
 //            System.out.println((int) Math.pow(i,2));
 //            i*=2;
 //        }while(i <= 500);
-        for (i = 2; i <=100000; i=(int) Math.pow(i,2)){
-            System.out.println(i);
-        }
+//        for (i = 2; i <=100000; i=(int) Math.pow(i,2)){
+//            System.out.println(i);
+//        }
 //        x = x.multiply(x)
 
-        // ### Fizz Buzz
+//         ### Fizz Buzz
 //        for (i = 1; i <=100; i++){
 //            if (i%3 == 0 && i%5 == 0){
 //                System.out.println("FizzBuzz: " + i);
