@@ -66,7 +66,9 @@ public class ControlFlowExercises {
         if (firstWord.equalsIgnoreCase("yes") || firstWord.equalsIgnoreCase("y")  ){
             System.out.print("Please enter a random school grade: ");
             int firstGrade = sc.nextInt();
-            if (firstGrade <= 100 && firstGrade >= 88){
+            if (firstGrade == 100 || firstGrade == 99) {
+                System.out.println("Your school grade is an A+ ! ");
+            } else if (firstGrade <= 98 && firstGrade >= 88){
                 System.out.println("Your school grade is an A! ");
             } else if (firstGrade <= 87 && firstGrade >= 80){
                 System.out.println("Your school grade is an B! ");
@@ -77,13 +79,15 @@ public class ControlFlowExercises {
             } else if (firstGrade <= 59 && firstGrade >= 0){
                 System.out.println("Your school grade is an F! ");
             }
+        } else if (firstWord.equalsIgnoreCase("no") || firstWord.equalsIgnoreCase("n")){
+            System.out.println("Thank you!  --  Bye Bye!!");
+            System.exit(0);
         }
         System.out.print("Would you like to continue?: ");
         String secondPrompt= sc.next();
         if (secondPrompt.equalsIgnoreCase("yes") || secondPrompt.equalsIgnoreCase("y")  ) {
             System.out.println("Well, this program is over, but keep coming");
-        }
-
-
+            System.exit(0);
+        } else System.exit(0);
     }
 }
