@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercises {
     public static void main(String[] args) {
@@ -30,6 +31,30 @@ public class MethodsExercises {
             }
             factorial(userInput);
         } else System.out.println("Thank you for using my program!");
+
+        System.out.println("Now we are going to play dice rolling!!");
+        System.out.print("Enter a number between 1 and 6 of the side on dice 1: ");
+        userInput = sc.nextInt();
+        while(userInput > 6 || userInput < 1) {
+            System.out.print("Please enter a number between 1 and 6, " + "'"+userInput+"'" + " is not valid:");
+            userInput = sc.nextInt();
+        }
+        System.out.print("Enter a number between 1 and 6 of the side on dice 2: ");
+        userInput = sc.nextInt();
+        while(userInput > 6 || userInput < 1){
+            System.out.print("Please enter a number between 1 and 6, " + "'"+userInput+"'" + " is not valid:");
+            userInput = sc.nextInt();
+        }
+        int random1 =diceRoll();
+        int random2 = diceRoll();
+        int sumRandom = random1 + random2;
+        System.out.println("ROLLING!!!\n" +
+                "......................\n" +
+                "......................");
+        System.out.println("The result of dice 1 is:  " + random1);
+        System.out.println("The result of dice 2 is:  " + random2);
+        System.out.println("Together they are a sum of:  " + sumRandom);
+
     }
 
     // MY FUNCTIONS
@@ -65,5 +90,10 @@ public class MethodsExercises {
            fact *= i;
             System.out.println(" " + fact);
         }
+    }
+    public static int diceRoll(){
+        Random rand = new Random();
+        int  n = rand.nextInt(6) + 1;
+        return n;
     }
 }
