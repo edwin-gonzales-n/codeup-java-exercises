@@ -10,6 +10,7 @@ public class Bob {
 //                He answers 'Whoa, chill out!' if you yell at him.
 //        He says 'Fine. Be that way!' if you address him without actually saying anything.
 //                He answers 'Whatever.' to anything else.
+
         String userInput;
         Scanner sc = new Scanner(System.in);
         System.out.println("Argue with Bob, if don't feel like type 'no' ");
