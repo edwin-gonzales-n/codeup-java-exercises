@@ -107,7 +107,6 @@ public class MethodsExercises {
             for (int i = 1; i < Math.abs(factor); ++i) {
                 product += multiplicand;
             }
-//            return factor >= 0 ? product : -product;
             System.out.println("No '*' multiplication: " + "The product of '" + multiplicand + "' added '" + factor  + "' times is: " + product);
         }
     }
