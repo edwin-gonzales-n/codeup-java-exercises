@@ -6,9 +6,9 @@ public class MethodsExercises {
         addition(10,8);
         subtraction(50,100);
         multiplication(10,10);
+        noStarMultiplication(12,10);
         division(1000,56);
         modulus(60,24);
-//        factorial(4);
 
         int userInput;
         int otherInput;
@@ -62,23 +62,23 @@ public class MethodsExercises {
     // MY FUNCTIONS
     public static void addition(int a, int b){
         int sum = a + b;
-        System.out.println(a + " + " + b + " = " + sum);
+        System.out.println("Addition: " + a + " + " + b + " = " + sum);
     }
     public static void subtraction(int a, int b){
         int sub = b - a;
-        System.out.println(b + " - " + a + " = " + sub);
+        System.out.println("Subtraction: " + b + " - " + a + " = " + sub);
     }
     public static void multiplication(int a, int b){
         int mul = a * b;
-        System.out.println(a + " * " + b + " = " + mul);
+        System.out.println("Multiplication: " + a + " * " + b + " = " + mul);
     }
     public static void division(int a, int b){
         int div = a/b;
-        System.out.println(a + " / " + b + " = " + div);
+        System.out.println("Division: " + a + " / " + b + " = " + div);
     }
     public static void modulus(int a, int b){
         int mod = a%b;
-        System.out.println(a + " % " + b + " = " + mod);
+        System.out.println("Modulus: " + a + " % " + b + " = " + mod);
     }
     public static void getInteger(int min, int max){
         if (min < 1 || max > 10){
@@ -98,5 +98,17 @@ public class MethodsExercises {
         int  n = rand.nextInt(6) + 1;
         return n;
     }
-
+    public static void noStarMultiplication(int multiplicand, int factor){
+        {
+            if (factor == 0) {
+             System.exit(0);
+            }
+            int product = multiplicand;
+            for (int i = 1; i < Math.abs(factor); ++i) {
+                product += multiplicand;
+            }
+//            return factor >= 0 ? product : -product;
+            System.out.println("No '*' multiplication: " + "The product of '" + multiplicand + "' added '" + factor  + "' times is: " + product);
+        }
+    }
 }
