@@ -55,6 +55,8 @@ public class MethodsExercises {
         System.out.println("The result of dice 2 is:  " + random2);
         System.out.println("Together they are a sum of:  " + sumRandom);
 
+
+
     }
 
     // MY FUNCTIONS
@@ -96,4 +98,5 @@ public class MethodsExercises {
         int  n = rand.nextInt(6) + 1;
         return n;
     }
+
 }
