@@ -7,7 +7,7 @@ public class ControlStructureBonuses {
         int userInteger;
         int i; // counter for "for loop"
         String userName;
-        String[] daysArray = {"test", "Monday", "Tuesday", "Wednesday", "Thursday","Friday","Saturday","Sunday"};
+        String[] daysArray = {"circleTest", "Monday", "Tuesday", "Wednesday", "Thursday","Friday","Saturday","Sunday"};
         Scanner sc = new Scanner(System.in);
         System.out.print("Please enter a number between 1 and 7: ");
         userInteger = sc.nextInt();
