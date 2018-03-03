@@ -1,38 +1,62 @@
 package util;
 import java.util.Scanner;
-import java.util.Random;
 
 public class Input {
-    private String scanner;
-    private String string;
-    private boolean yesNo;
-    private int integer;
-    private double IamDouble;
+    private Scanner scanner;
 
-    public int getInteger(int min, int max){
-        do{
-            System.out.println("Try again!");
-            System.out.println("Please enter the correct order of numbers, min and max.");
-            break;
-        }while(min > max || max < min);
-        return min + max;
+    public Input (){
+        scanner = new Scanner(System.in);
     }
-    public int getInteger(){
-        return integer;
+    public String getString(){
+        return scanner.next();
     }
-    public double getIamDouble(double min, double max){
-        return min + max;
-    }
-    public double getIamDouble(){
-        return IamDouble;
-    }
-    //Boolean stuff
-    public boolean setyesNo(String input){
-        if(input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y")){
-            return yesNo = true;
+    public boolean yesNo(){
+        String userInput = getString();
+        if(userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")){
+            return true;
         } else return false;
     }
-    public boolean getyesNo() {
-        return yesNo;
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        return yesNo();
+    }
+    // int
+    public int getInt(){
+        return scanner.nextInt();
+    }
+    public int getInt(String prompt){
+        System.out.println(prompt);
+        return getInt();
+    }
+    public int getInt(int min, int max){
+        int userInput = getInt();
+        if(userInput < min || userInput > max){
+            System.out.println("Invalid number!  Try again!");
+            return getInt(min,max);
+        } else
+            return userInput;
+    }
+    public int getInt(int min, int max, String prompt){
+        System.out.println(prompt);
+        return getInt(min,max);
+    }
+    // double
+    public double getDouble(){
+        return scanner.nextDouble();
+    }
+    public double getDouble(String prompt){
+        System.out.println(prompt);
+        return getDouble();
+    }
+    public double getDouble(double min, double max){
+        double userInput = getDouble();
+        if(userInput < min || userInput > max){
+            System.out.println("Invalid decimal!  Try again!");
+            return getDouble(min,max);
+        } else return userInput;
+    }
+    public double getDouble(double min, double max, String prompt){
+        System.out.println(prompt);
+        return getDouble(min,max);
     }
 }
