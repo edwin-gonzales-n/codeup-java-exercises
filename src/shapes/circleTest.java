@@ -18,8 +18,8 @@ public class circleTest {
             while (userInput){
                 userRadius = input.getInt("Please enter a radius value for the circle: ");
                 circles = new circleApp(userRadius);
-                System.out.println("Your circle circumference is: " + circles.getCircumference());
-                System.out.println("Your circle area is: " + circles.getArea());
+                System.out.printf("Your circle circumference is: %s\n", circles.getCircumference());
+                System.out.printf("Your circle area is: %s\n", circles.getArea());
                 System.out.println("You have created " + circles.getnumberofCircles() + " circles!\n");
                 userInput = input.yesNo("Would you like to play again?");
             }
