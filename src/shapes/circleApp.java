@@ -1,8 +1,6 @@
 package shapes;
-import util.Input;
 
 public class circleApp {
-    Input input = new Input();
     private double radius;
     private static int counter = 0;
 
