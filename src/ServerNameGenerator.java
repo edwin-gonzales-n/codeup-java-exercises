@@ -1,3 +1,4 @@
+
 public class ServerNameGenerator {
     private String[] adjectives = {"attractive", "bald", "beautiful", "chubby", "clean", "dazzling", "drab", "elegant", "fancy", "fit"};
     private String[] nouns = {"man", "mountain", "state", "ocean", "country", "building", "cat", "airline","love", "wealth"};

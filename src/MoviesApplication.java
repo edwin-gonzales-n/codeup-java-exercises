@@ -1,16 +1,11 @@
 import movies.MoviesArray;
 import movies.Movie;
 import util.Input;
-import java.util.List;
-
-import java.util.Scanner;
 
 public class MoviesApplication {
     public static void main(String[] args) {
         Input input = new Input();
 
-        System.out.println("Welcome to the movie app, enter any number to continue...");
-        int userStart = input.getInt();
         do{
             System.out.println("\nWhat would you like to do?\n" +
                     "\n" +
@@ -20,8 +15,10 @@ public class MoviesApplication {
                     "3 - view movies in the drama category\n" +
                     "4 - view movies in the horror category\n" +
                     "5 - view movies in the scifi category\n" +
-                    "6 - search by title\n" +
-                    "7 - you would like to add a movie and category\n");
+                    "6 - view movies in the musical category\n" +
+                    "7 - search by title\n" +
+                    "8 - you would like to add a movie and category\n");
+
             int userInput = input.getInt();
             switch (userInput){
                 case 0:
@@ -43,29 +40,30 @@ public class MoviesApplication {
                     movies("scifi");
                     break;
                 case 6:
-                    movieSearch();
+                    movies("musical");
                     break;
                 case 7:
+                    movieSearch();
+                    break;
+                case 8:
                     userMovie();
                     break;
             }
-            System.out.println("\nEnter any number to go back to main menu.");
-            userStart = input.getInt();
-        }while(userStart < 10);
-
-
+        }while(true);
     }
+
+    // objects ###
     public static void movies(){
         System.out.print("MOVIE                               |CATEGORY\n");
-        for(int i = 0; i < MoviesArray.findAll().length; i++){
-            System.out.printf("%-36s|%-10s\n",MoviesArray.findAll()[i].getName(),MoviesArray.findAll()[i].getCategory());
+        for(Movie movie: MoviesArray.findAll()){
+            System.out.printf("%-36s|%-10s\n", movie.getName(),movie.getCategory());
         }
     }
     public static void movies(String category){
         System.out.print("MOVIE                               |CATEGORY\n");
-        for(int i = 0; i < MoviesArray.findAll().length; i++){
-            if (MoviesArray.findAll()[i].getCategory().equals(category)){
-                System.out.printf("%-36s|%6s\n",MoviesArray.findAll()[i].getName(),MoviesArray.findAll()[i].getCategory());
+        for(Movie movie: MoviesArray.findAll()){
+            if (movie.getCategory().equals(category)){
+                System.out.printf("%-36s|%6s\n",movie.getName(),movie.getCategory());
             }
         }
     }
@@ -74,9 +72,9 @@ public class MoviesApplication {
         System.out.println("Please type a movie name to search for:");
         String userInput = input.getString();
         System.out.print("MOVIE                               |CATEGORY\n");
-        for(int i = 0; i < MoviesArray.findAll().length; i++){
-            if (MoviesArray.findAll()[i].getName().equalsIgnoreCase(userInput)){
-                System.out.printf("%-36s|%6s\n",MoviesArray.findAll()[i].getName(),MoviesArray.findAll()[i].getCategory());
+        for(Movie movie: MoviesArray.findAll()){
+            if (movie.getName().equalsIgnoreCase(userInput)){
+                System.out.printf("%-36s|%6s\n",movie.getName(),movie.getCategory());
             }
         }
     }
@@ -95,8 +93,8 @@ public class MoviesApplication {
 //        Movie test = new Movie(userMovieName,userCategoryName);
         copyArray[copyArray.length -1] = new Movie(userMovieName,userCategoryName);
 
-        for (int i = 0; i < copyArray.length; i++) {
-            System.out.printf("%-36s|%-10s\n",copyArray[i].getName(),copyArray[i].getCategory());
+        for (Movie movie: copyArray) {
+            System.out.printf("%-36s|%-10s\n",movie.getName(),movie.getCategory());
         }
     }
 }
