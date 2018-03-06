@@ -3,6 +3,7 @@ import movies.Movie;
 import util.Input;
 
 public class MoviesApplication {
+    public static Movie[] movies = MoviesArray.findAll();
     public static void main(String[] args) {
         Input input = new Input();
 
@@ -55,13 +56,13 @@ public class MoviesApplication {
     // objects ###
     public static void movies(){
         System.out.print("MOVIE                               |CATEGORY\n");
-        for(Movie movie: MoviesArray.findAll()){
+        for(Movie movie: movies){
             System.out.printf("%-36s|%-10s\n", movie.getName(),movie.getCategory());
         }
     }
     public static void movies(String category){
         System.out.print("MOVIE                               |CATEGORY\n");
-        for(Movie movie: MoviesArray.findAll()){
+        for(Movie movie: movies){
             if (movie.getCategory().equals(category)){
                 System.out.printf("%-36s|%6s\n",movie.getName(),movie.getCategory());
             }
@@ -72,7 +73,7 @@ public class MoviesApplication {
         System.out.println("Please type a movie name to search for:");
         String userInput = input.getString();
         System.out.print("MOVIE                               |CATEGORY\n");
-        for(Movie movie: MoviesArray.findAll()){
+        for(Movie movie: movies){
             if (movie.getName().equalsIgnoreCase(userInput)){
                 System.out.printf("%-36s|%6s\n",movie.getName(),movie.getCategory());
             }
@@ -81,17 +82,16 @@ public class MoviesApplication {
     public static void userMovie(){
         Input input = new Input();
         Movie[] copyArray;
-        copyArray = new Movie[MoviesArray.findAll().length + 1];
-        System.arraycopy(MoviesArray.findAll(), 0 , copyArray, 0 , MoviesArray.findAll().length);
+        copyArray = new Movie[movies.length + 1];
+        System.arraycopy(movies, 0 , copyArray, 0 , movies.length);
 
         System.out.println("Please enter a movie name: ");
         String userMovieName = input.getString();
         System.out.println("Please enter a category name: ");
         String userCategoryName = input.getString();
-        System.out.println(userMovieName);
-        System.out.println(userCategoryName);
-//        Movie test = new Movie(userMovieName,userCategoryName);
+
         copyArray[copyArray.length -1] = new Movie(userMovieName,userCategoryName);
+        movies = copyArray;
 
         for (Movie movie: copyArray) {
             System.out.printf("%-36s|%-10s\n",movie.getName(),movie.getCategory());
