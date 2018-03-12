@@ -27,6 +27,11 @@ public class CommissionEmployeePoly extends Employee{
     }
 
     @Override
+    public double getPaymentAmount() {
+        return getCommissionRate() * getGrossSales();
+    }
+
+    @Override
     public double earnings() {
         return getCommissionRate() * getGrossSales();
     }

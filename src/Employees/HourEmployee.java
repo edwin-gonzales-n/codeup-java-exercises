@@ -30,6 +30,11 @@ public class HourEmployee extends Employee{
 
 
     @Override
+    public double getPaymentAmount() {
+        return getWage();
+    }
+
+    @Override
     public double earnings() {
         if (getHours() <= 40) // no overtime
             return getWage() * getHours();

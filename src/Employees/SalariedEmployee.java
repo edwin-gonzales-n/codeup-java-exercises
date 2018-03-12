@@ -24,6 +24,11 @@ public class SalariedEmployee extends Employee{
     }
 
     @Override
+    public double getPaymentAmount() {
+        return getWeeklySalary();
+    }
+
+    @Override
     public String toString() {
         return "SalariedEmployee { " + super.toString() +
                 " weeklySalary = " + getWeeklySalary() +

@@ -3,7 +3,7 @@ package Applets;
 import javax.swing.*;
 import java.awt.*;
 
-public class WelcomeApplet extends JPanel{
+public class WelcomeApplet extends JApplet{
         public void paint (Graphics g){
             super.paint(g);
             g.drawString("Welcome to the Jungle!",35,35);
