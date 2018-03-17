@@ -37,13 +37,16 @@ public class InputTest {
 
 //        fileHelper.slurp("/Users/Gonzo 1/IdeaProjects/codeup-java-exercise/src", "ControlStructureBonuses.java");
         ArrayList<String> list = new ArrayList<>();
-//        list.add("Hello !");
-//        list.add("This is a test");
-//        list.add("Nothing but a test!");
-//        list.add("This another run and we added this line");
-//
-//        fileHelper.spit("/Users/Gonzo 1/IdeaProjects/codeup-java-exercise/src/test",list,true);
+        list.add("Hello !");
+        list.add("This is a test");
+        list.add("Nothing but a test!");
+        list.add("This another run and we added this line");
+
+        fileHelper.spit("/Users/Gonzo 1/IdeaProjects/codeup-java-exercise/src/test",list,true);
+
+
 //        fileHelper.slurp("/Users/Gonzo 1/IdeaProjects/codeup-java-exercise/src","test");
+
 //        fileHelper.makeExciting("/Users/Gonzo 1/IdeaProjects/codeup-java-exercise/src/test_news.out");
 
 //        fileHelper.copy("/Users/Gonzo 1/IdeaProjects/codeup-java-exercise/src/test_news.out",
@@ -52,7 +55,7 @@ public class InputTest {
 //        fileHelper.move("/Users/Gonzo 1/IdeaProjects/codeup-java-exercise/test_news.out",
 //                "/Users/Gonzo 1/IdeaProjects/test_news.out");
 
-        fileHelper.findString("/Users/Gonzo 1/IdeaProjects/newContacts.csv","Chauncey");
+//        fileHelper.findString("/Users/Gonzo 1/IdeaProjects/newContacts.csv","Chauncey");
 
 
     }

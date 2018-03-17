@@ -30,7 +30,6 @@ public class FileHelper {
                     Files.write(Paths.get(filename), contents, StandardOpenOption.APPEND);
                 } else if(Files.exists(Paths.get(filename))){
                     Files.write(Paths.get(filename), contents, StandardOpenOption.APPEND);
-
                 }
             }
         }catch (RuntimeException RuntimeException){
