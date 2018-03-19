@@ -3,7 +3,9 @@ import movies.Movie;
 import util.Input;
 
 public class MoviesApplication {
+
     public static Movie[] movies = MoviesArray.findAll();
+
     public static void main(String[] args) {
         Input input = new Input();
 
