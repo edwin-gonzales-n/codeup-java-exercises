@@ -12,7 +12,7 @@ public class DisplayAuthors {
         ResultSet resultSet = null;
         try{
             Class.forName(Driver);
-            connection = DriverManager.getConnection(DATABASE_URL,"codeup_db_user","admin123");
+            connection = DriverManager.getConnection(DATABASE_URL,"codeup_test_user","admin123");
 
             statement = connection.createStatement();
 
